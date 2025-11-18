@@ -2,6 +2,6 @@ fastapi
 uvicorn[standard]
 pydantic
 httpx
-aioredis
+redis>=5.0.0
 cryptography
 python-dotenv
