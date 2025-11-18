@@ -5,3 +5,4 @@ httpx
 aioredis
 cryptography
 python-dotenv
+distutils
