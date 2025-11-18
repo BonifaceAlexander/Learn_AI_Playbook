@@ -1,0 +1,107 @@
+[
+  {
+    "slug": "intro-to-llms",
+    "title": "Intro to Large Language Models (LLMs)",
+    "description": "LLMs are deep learning models trained on large corpora to model and generate natural language. This lesson explains training vs inference, tokens, and core limitations."
+  },
+  {
+    "slug": "tokens-and-tokenization",
+    "title": "Tokens & Tokenization",
+    "description": "Tokens are the atomic units used by LLMs. Understanding tokenization helps you optimize prompts and estimate costs."
+  },
+  {
+    "slug": "prompt-engineering-basics",
+    "title": "Prompt Engineering Basics",
+    "description": "Prompt engineering is designing prompts that reliably elicit the desired behavior from an LLM. This covers system messages, examples, and structure."
+  },
+  {
+    "slug": "few-shot-and-context",
+    "title": "Few-shot & Context",
+    "description": "Few-shot prompting means giving examples in the prompt. This helps models follow strict output formats but uses up context window tokens."
+  },
+  {
+    "slug": "temperature-and-sampling",
+    "title": "Temperature & Sampling",
+    "description": "Temperature controls randomness in token sampling. Lower temperature produces conservative outputs; higher temperature increases creativity."
+  },
+  {
+    "slug": "system-messages-and-role",
+    "title": "System Messages & Roles",
+    "description": "System messages (often the first message) tell the model its role and constraints; using them carefully yields safer and more useful responses."
+  },
+  {
+    "slug": "rag-basics",
+    "title": "RAG (Retrieval-Augmented Generation) Basics",
+    "description": "RAG combines a retriever (vector DB) with a generator. You index documents with embeddings and retrieve relevant passages to include in prompts."
+  },
+  {
+    "slug": "embeddings-and-vector-db",
+    "title": "Embeddings & Vector DBs",
+    "description": "Embeddings convert text into vectors for similarity search. Vector DBs store and search these efficiently."
+  },
+  {
+    "slug": "building-agents",
+    "title": "Building Agents",
+    "description": "Agents combine LLMs with tools (APIs, knowledge bases) to perform multi-step tasks. Design carefully to avoid unsafe behavior."
+  },
+  {
+    "slug": "safety-and-moderation",
+    "title": "Safety & Moderation",
+    "description": "Safety includes content filtering, rate-limiting, and privacy-aware storage. Build guardrails before public release."
+  },
+  {
+    "slug": "open-models-and-ollama",
+    "title": "Open Models & Ollama",
+    "description": "Open models allow running inference locally or on your infra. Ollama and vLLM provide easy hosting for some open models."
+  },
+  {
+    "slug": "cost-management",
+    "title": "Cost Management",
+    "description": "Estimate tokens, cache results, and discourage wasteful runs. BYOK shifts cost to users if client-side, but server-side proxies require monitoring."
+  },
+  {
+    "slug": "evaluation-and-metrics",
+    "title": "Evaluation & Metrics",
+    "description": "Evaluation requires test sets, human labels, and automated metrics. Use human-in-the-loop for high-value tasks."
+  },
+  {
+    "slug": "prompt-templates-and-reuse",
+    "title": "Prompt Templates & Reuse",
+    "description": "Templates help standardize prompts across the organization and improve reproducibility."
+  },
+  {
+    "slug": "multimodal-intro",
+    "title": "Multimodal Introduction",
+    "description": "Multimodal models handle text, images, and audio. Use case examples include captioning, VQA, and text+image assistants."
+  },
+  {
+    "slug": "evaluation-and-robustness",
+    "title": "Robustness & Adversarial Testing",
+    "description": "Robustness testing finds edge cases and adversarial prompts. Automated fuzzing and human review complement each other."
+  },
+  {
+    "slug": "deployment-patterns",
+    "title": "Deployment Patterns",
+    "description": "Decide between serverless, containerized, or hybrid deployments depending on latency, cost, and scaling needs."
+  },
+  {
+    "slug": "privacy-and-data-handling",
+    "title": "Privacy & Data Handling",
+    "description": "Handle PII carefully: redact, minimize retention, and obtain consent before storing user content or keys."
+  },
+  {
+    "slug": "finetuning-vs-prompting",
+    "title": "Fine-tuning vs Prompting",
+    "description": "Fine-tuning adapts model weights to a task; prompting tailors behavior without weight updates. Choose based on data, latency, and cost."
+  },
+  {
+    "slug": "observability-and-monitoring",
+    "title": "Observability & Monitoring",
+    "description": "Track metrics (latency, token usage, errors), logs, and set alerts. Use dashboards (Grafana) for visibility."
+  },
+  {
+    "slug": "ethics-and-responsible-ai",
+    "title": "Ethics & Responsible AI",
+    "description": "Responsible AI includes fairness, transparency, and human oversight. Add documentation and model cards for transparency."
+  }
+]
