@@ -18,10 +18,14 @@ export async function getStaticProps({ params }) {
 }
 
 export default function Lesson({ content, slug }) {
+  if (!content) {
+    return <div className="container">Error: No content found for this lesson.</div>;
+  }
+
   return (
     <div className="container">
-      <div style={{marginBottom:12}}><Link href="/lessons"><a>← Back to Lessons</a></Link></div>
-      <article style={{background:'#fff', padding:20, borderRadius:8}}>
+      <div style={{ marginBottom: 12 }}><Link href="/lessons">← Back to Lessons</Link></div>
+      <article style={{ background: '#fff', color: '#0f1014', padding: 20, borderRadius: 8 }}>
         <ReactMarkdown remarkPlugins={[remarkGfm]}>{content}</ReactMarkdown>
       </article>
     </div>
