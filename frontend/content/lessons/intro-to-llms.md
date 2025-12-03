@@ -34,8 +34,16 @@ print('Token count:', len(ids))
 
 ## Exercise
 
-- Run the example and measure token counts for short vs long prompts.
-- Try a few-shot prompt and observe token growth.
+- Create a template that returns JSON with fields 'summary' and 'tags'.
+- Test with varied inputs and measure consistency.
+
+![Prompt Flow](/diagrams/prompt-flow.png)
+
+[Try it in Sandbox](/sandbox?prompt=Create%20a%20template%20that%20returns%20JSON%20with%20fields%20summary%20and%20tags.)
+
+![LLM Architecture](/diagrams/llm-architecture.png)
+
+[Try it in Sandbox](/sandbox?prompt=Run%20the%20example%20and%20measure%20token%20counts%20for%20short%20vs%20long%20prompts.)
 
 ---
 

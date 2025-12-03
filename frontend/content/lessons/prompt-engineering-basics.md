@@ -32,6 +32,10 @@ prompt = '''You are a helpful assistant.\nRespond with JSON: {"summary":...,"key
 - Create a template that returns JSON with fields 'summary' and 'tags'.
 - Test with varied inputs and measure consistency.
 
+![Prompt Flow Diagram](/diagrams/prompt-flow.png)
+
+[Try it in Sandbox](/sandbox?prompt=Create%20a%20template%20that%20returns%20JSON%20with%20fields%20summary%20and%20tags.)
+
 ---
 
 ## Further reading

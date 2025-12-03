@@ -1,8 +1,10 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 export default function Sandbox() {
+    const router = useRouter();
     const [apiKey, setApiKey] = useState('');
     const [systemPrompt, setSystemPrompt] = useState('You are a helpful AI assistant.');
     const [userPrompt, setUserPrompt] = useState('Explain quantum computing in one sentence.');
@@ -10,6 +12,12 @@ export default function Sandbox() {
     const [response, setResponse] = useState('');
     const [loading, setLoading] = useState(false);
     const [mode, setMode] = useState('mock'); // 'mock' or 'real'
+
+    useEffect(() => {
+        if (router.query.prompt) {
+            setUserPrompt(router.query.prompt);
+        }
+    }, [router.query.prompt]);
 
     const runSandbox = async () => {
         setLoading(true);
@@ -42,7 +50,7 @@ export default function Sandbox() {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
-                        'Authorization': `Bearer ${apiKey}`
+                        'Authorization': `Bearer ${apiKey} `
                     },
                     body: JSON.stringify({
                         model: "gpt-3.5-turbo",
@@ -56,13 +64,13 @@ export default function Sandbox() {
 
                 const data = await res.json();
                 if (data.error) {
-                    setResponse(`Error: ${data.error.message}`);
+                    setResponse(`Error: ${data.error.message} `);
                 } else {
                     setResponse(data.choices[0].message.content);
                 }
             }
         } catch (err) {
-            setResponse(`Error: ${err.message}`);
+            setResponse(`Error: ${err.message} `);
         } finally {
             setLoading(false);
         }
@@ -86,7 +94,7 @@ export default function Sandbox() {
                 </p>
             </div>
 
-            <div className="grid-2" style={{ display: 'grid', gridTemplateColumns: '300px 1fr', gap: '32px' }}>
+            <div className="grid-2" style={{ display: 'grid', gap: '32px', gridTemplateColumns: '300px 1fr' }}>
 
                 {/* Controls Sidebar */}
                 <div className="card">

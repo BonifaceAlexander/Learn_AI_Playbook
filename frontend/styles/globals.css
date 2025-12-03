@@ -89,3 +89,112 @@ h3 {
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
+/* Typography for Lessons */
+.prose {
+    color: var(--text-primary);
+    line-height: 1.7;
+    font-size: 1.1rem;
+}
+
+.prose h1,
+.prose h2,
+.prose h3 {
+    margin-top: 2em;
+    margin-bottom: 0.5em;
+    color: #fff;
+}
+
+.prose h1 {
+    font-size: 2.5rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.5em;
+}
+
+.prose h2 {
+    font-size: 1.8rem;
+}
+
+.prose h3 {
+    font-size: 1.4rem;
+}
+
+.prose p {
+    margin-bottom: 1.5em;
+}
+
+.prose ul,
+.prose ol {
+    padding-left: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+.prose li {
+    margin-bottom: 0.5em;
+}
+
+.prose code {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.2em 0.4em;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 0.9em;
+}
+
+.prose pre {
+    background: #1e1e1e;
+    padding: 1.5em;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-bottom: 1.5em;
+    border: 1px solid var(--border-color);
+}
+
+.prose pre code {
+    background: none;
+    padding: 0;
+    color: #d4d4d4;
+}
+
+.prose blockquote {
+    border-left: 4px solid var(--accent-primary);
+    padding-left: 1em;
+    margin-left: 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.prose img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 24px 0;
+    border: 1px solid var(--border-color);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        padding: 16px;
+    }
+
+    h1 {
+        font-size: 2rem !important;
+    }
+
+    .grid-2,
+    .grid-3 {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* Sandbox Mobile */
+    .grid-2>div:first-child {
+        order: 2;
+        /* Move controls to bottom on mobile */
+    }
+
+    /* Arcade Mobile */
+    .card {
+        padding: 16px;
+    }
+}

@@ -37,6 +37,10 @@ print(embs.shape)
 
 - Build a tiny RAG: index 5 docs, run 3 queries, compare answers with/without retrieval.
 
+![RAG Diagram](/diagrams/rag-diagram.png)
+
+[Try it in Sandbox](/sandbox?prompt=Simulate%20a%20RAG%20system.%20Context%3A%20%5B%27The%20moon%20is%20made%20of%20cheese%27%2C%20%27Mars%20is%20red%27%5D.%20Query%3A%20%27What%20is%20the%20moon%20made%20of%3F%27)
+
 ---
 
 ## Further reading
